@@ -7,6 +7,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://pitt-soar.github.io",
-	base: "website",
+	base: "",
 	integrations: [mdx(), sitemap(), tailwind()],
 });
