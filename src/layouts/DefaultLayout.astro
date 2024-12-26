@@ -9,7 +9,7 @@ const {
   title = 'Panther Robotics',
   description = 'Pitt\'s URC Team.',
   url,
-  image = '/social-preview-image.png',
+  image = '/DSC01787.jpg',
   author = 'Pitt',
 } = Astro.props
 ---
@@ -28,7 +28,7 @@ const {
       description={description.substring(0, 100)}
       url={Astro.site
         ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+        : `https://pitt-soar.github.io/${title.toLowerCase().replaceAll(' ', '-')}`}
       image={image}
       author={author}
     />
