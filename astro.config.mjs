@@ -1,11 +1,29 @@
-import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx'
+import tailwind from '@astrojs/tailwind'
+import compress from 'astro-compress'
+import icon from 'astro-icon'
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://pitt-soar.github.io",
-	integrations: [mdx(), sitemap(), tailwind()],
-});
+  compressHTML: true,
+  integrations: [
+    mdx(),
+    icon(),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    compress(),
+  ],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          logger: {
+            warn: () => {},
+          },
+        },
+      },
+    },
+  },
+})
