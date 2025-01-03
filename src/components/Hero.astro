@@ -1,7 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import DSC01787 from '../assets/img/DSC01787.jpg';
 
-const { src = '/DSC01787.jpg' } = Astro.props
+const { src = DSC01787 } = Astro.props
 ---
 
 <section class="hero my-24">
@@ -25,7 +27,7 @@ const { src = '/DSC01787.jpg' } = Astro.props
           </a>
         </div>
       </div>
-      <img class="hidden lg:block rounded-lg" src={src} alt="" decoding="async" />
+      <Image class="hidden lg:block rounded-lg" src={src} alt="" decoding="async" />
     </div>
   </div>
 </section>
